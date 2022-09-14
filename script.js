@@ -2,7 +2,6 @@ const display = document.getElementById("display");
 const question = document.getElementById("question");
 const startBtn = document.getElementById("starts");
 const countdownOverlay = document.getElementById("countdown");
-countdownOverlay.textContent='';
 const resultModal = document.getElementById("result");
 const modalBackground = document.getElementById("modal-background");
 
@@ -36,6 +35,7 @@ const typeController = (e) => {
 
   // if it is not a valid character like Control/Alt then skip displaying anything
   if (!validLetters.includes(newLetter)) {
+    errorCount++;
     return;
   }
 
@@ -78,7 +78,7 @@ const gameOver = () => {
   display.innerHTML = "";
   // make it inactive
   display.classList.add("inactive");
-  // show result
+  // show result 
   resultModal.innerHTML += `
     <h1>Finished!</h1>
     <p>You took: <span class="bold">${timeTaken}</span> seconds</p>
@@ -106,6 +106,7 @@ const start = () => {
 
   let count = 3;
   countdownOverlay.style.display = "flex";
+  countdownOverlay.innerHTML='';
   const startCountdown = setInterval(() => {
     //console.log(count);
     countdownOverlay.innerHTML = `<h1>${count}</h1>`;
