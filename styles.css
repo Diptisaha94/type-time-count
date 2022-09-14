@@ -74,12 +74,15 @@ body {
   color: white;
   text-align: center;
   padding: 2rem;
+  margin-top: 200px;
+  margin-left: 200px;
 }
 #show-time{
   text-align: center;
   color: white;
   margin: 10px 0;
 }
+
 
 .green {
   color: #9dffad;
@@ -178,7 +181,7 @@ button {
   height: 100vh;
   width: 100%;
   position: fixed;
-  top: 0;
+  top:0;
 }
 
 @media only screen and (max-width: 700px) {
