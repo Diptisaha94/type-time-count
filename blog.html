@@ -4,14 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Blog</title>
     <link rel="stylesheet" href="blog.css">
 </head>
 <body>
     <section>
         <div class="container">
             <h1>1. What's the difference between Localstorage and Sessionstorage?</h1>
-            <p>sessionStorage is similar to localStorage ; the difference is that while data in localStorage doesn't expire, data in sessionStorage is cleared when the page session ends. Whenever a document is loaded in a particular tab in the browser, a unique page session gets created and assigned to that particular tab.</p>
+            <p>LocalStorage is a property that allows JavaScript sites and apps to save key-value pairs in a web browser with no expiration date. This means the data stored in the browser will persist even after the browser window is closed.</p>
+            <p>Session storage is a popular choice when it comes to storing data on a browser. It enables developers to save and retrieve different values. Unlike local storage, session storage only keeps data for a particular session. The data is cleared once the user closes the browser window.</p>
+            <h1>2.What's the defference between global scope and block scope?</h1>
+            <p>Global scope — Global scope contains all of the things defined outside of all code blocks. A code block simply consists of grouped statements inside curly braces ({ }). if statement, loops, function are examples of structure that create a code block. A global variable has global scope. A global variable is accessible from anywhere in the code.</p>
+            <p>Block Level Scope: This scope restricts the variable that is declared inside a specific block, from access by the outside of the block. The let & const keyword facilitates the variables to be block scoped. In order to access the variables of that specific block, we need to create an object for it.</p>
+            <h1>3. How javascript event loop works?</h1>
+            <p>The event loop is a mechanism that allows JavaScript to perform non-blocking operations. When an asynchronous task is started, the event loop will start running. Once the task is completed, the event loop will again check for any other tasks that need to be performed.JS executes all operations on a single thread, but using a few smart data structures, it gives us the illusion of multi-threading.Whenever an async function is called, it is sent to a browser API. These are APIs built into the browser. Based on the command received from the call stack, the API starts its own single-threaded operation.An example of this is the setTimeout method. When a setTimeout operation is processed in the stack, it is sent to the corresponding API which waits till the specified time to send this operation back in for processing.The event loop facilitates this process; it constantly checks whether or not the call stack is empty. If it is empty, new functions are added from the event queue. If it is not, then the current function call is processed.</p>
+            <h1>4. How many ways to get undefined?</h1>
+            <p>8 ways to get undefined.</p>
+            <ol class="font">
+                <li>Variable that is not initialized will give undefined.</li>
+                <li>Function will no return will give undefined.</li>
+                <li>Parameter that is not passed will be undefined.</li>
+                <li>If return has nothing on the right side will return undefined.</li>
+                <li>Poperty that doesn't exists on an object will give undefined.</li>
+                <li>Accesssing array elemens outside of the index range will give undefined.</li>
+                <li>Deleting an element inside an array give undefined.</li>
+                <li>Set a value directly to undefined give undefined.</li>
+            </ol>
         </div>
     </section>
 </body>
