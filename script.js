@@ -35,10 +35,9 @@ const typeController = (e) => {
 
   // if it is not a valid character like Control/Alt then skip displaying anything
   if (!validLetters.includes(newLetter)) {
-    errorCount++;
     return;
   }
-
+  
   userText += newLetter;
 
   const newLetterCorrect = validate(newLetter);
@@ -52,6 +51,9 @@ const typeController = (e) => {
   // check if given question text is equal to user typed text
   if (questionText === userText) {
     gameOver();
+  }
+  if(!newLetterCorrect){
+    errorCount++;
   }
 };
 

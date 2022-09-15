@@ -145,7 +145,7 @@ button {
 #histories {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  /*justify-content: space-around;*/
 }
 
 .card {
@@ -195,5 +195,6 @@ button {
   .card{
     flex-direction: column;
     width: 32%;
+    margin-right: 10px;
   }
 } 
